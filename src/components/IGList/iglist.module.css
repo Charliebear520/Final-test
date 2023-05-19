@@ -1,0 +1,42 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3em;
+  margin: 2em;
+}
+.head {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  /* font-size: 40px; */
+  line-height: 48px;
+  /* identical to box height */
+
+  text-align: center;
+}
+.logo {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  /* font-size: 40px; */
+  line-height: 48px;
+  /* identical to box height */
+
+  text-align: center;
+}

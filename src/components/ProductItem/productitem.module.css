@@ -1,0 +1,53 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* background-color: #faf7f2; */
+  border-radius: 1%;
+  /* border: solid #faf7f2 1px; */
+  padding: 2rem;
+  margin: 2em;
+}
+
+.info {
+  padding: 1.2rem;
+}
+
+.category {
+  opacity: 0.4;
+  margin-bottom: 0.2rem;
+}
+
+.name {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  align-self: center;
+  color: #8183ff;
+}
+
+.textGray {
+  opacity: 0.6;
+}

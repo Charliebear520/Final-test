@@ -1,0 +1,62 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 6rem 3rem 6rem;
+  margin: 2em;
+}
+
+.image_col {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.detail-image {
+  width: 100%;
+}
+
+.detail_col {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* height: 200px; */
+}
+
+.name {
+  display: grid;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+  width: 50%;
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.description {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 16px;
+  padding: 2rem 24px;
+}

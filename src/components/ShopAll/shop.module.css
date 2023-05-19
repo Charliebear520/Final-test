@@ -1,0 +1,52 @@
+.head {
+  display: grid;
+  margin: 2em;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+}
+.logo {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 86px;
+  /* identical to box height */
+}
+.description {
+  display: grid;
+  margin: 2rem 20em 2rem 20em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    margin: 2rem 2rem 2rem 2rem;
+  }
+  .logo {
+    font-size: 40px;
+  }
+}

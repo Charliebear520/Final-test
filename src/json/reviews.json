@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "category": "Textile",
+    "name": "Domino wool throw",
+    "sku": "sku_313354",
+    "price": 82,
+    "image": "/images/woman2.png",
+    "description": "An excellent remedy for which my skin literally glows from the inside. I love this remedy! It does not cause me allergies, although I have very sensitive skin. It's just some kind of miracle",
+    "currency": "USD",
+    "countInStock": 10
+  },
+  {
+    "id": "2",
+    "category": "Textile",
+    "name": "Pom Pom cushion 45x45 cm",
+    "sku": "sku_313355",
+    "price": 76,
+    "image": "/images/woman1.png",
+    "description": "I doubted for a long time about the purchase of this product and all my doubts were in vain. I was very surprised by the effect of this product,  as my skin began to live in a new way. Some of  the rashes have disappeared and my skin is  nourished and moisturized.",
+    "currency": "USD",
+    "countInStock": 3
+  },
+  {
+    "id": "3",
+    "category": "Tableware",
+    "name": "Rustic mug",
+    "sku": "sku_313356",
+    "price": 6,
+    "image": "/images/woman3.png",
+    "description": "Love at first touch. I am very happy that I tried this remedy. It made my skin feel better and nourished, my skin stopped experiencing dryness and tightness, my skin is nourished and shines with health!",
+    "currency": "USD",
+    "countInStock": 6
+  },
+  {
+    "id": "4",
+    "category": "Tableware",
+    "name": "Essence white wine glass 4-pack",
+    "sku": "sku_313358",
+    "price": 63,
+    "image": "/images/woman1.png",
+    "description": "Love at first touch. I am very happy that I tried this remedy. It made my skin feel better and nourished, my skin stopped experiencing dryness and tightness, my skin is nourished and shines with health!",
+    "currency": "USD",
+    "countInStock": 3
+  }
+]

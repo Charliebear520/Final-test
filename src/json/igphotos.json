@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "category": "Textile",
+    "name": "Domino wool throw",
+    "sku": "sku_313354",
+    "price": 82,
+    "image": "/images/ig1.png",
+    "description": "From 16.9 fl oz ",
+    "description_long": "Keep warm with the cozy Domino wool throw from Klippan Yllefabrik. Klippan Yllefabric was founded in 1879 with a philosophy to combine Swedish design with the traditional knowledge of textiles. This particular throw has a simple, classic pattern design and is available in different colors.",
+    "currency": "USD",
+    "countInStock": 10
+  },
+  {
+    "id": "2",
+    "category": "Textile",
+    "name": "Pom Pom cushion 45x45 cm",
+    "sku": "sku_313355",
+    "price": 76,
+    "image": "/images/ig2.png",
+    "description": "From 17.2 fl oz ＄51.00",
+    "description_long": "The Pom Pom cushion 45x45 cm from the Swedish By On is a pure dream for those who love soft and cosy styles of decor. This wonderful cushion is covered in small, fluffy Pom Poms, which quickly helps you create an inviting and snug feel on your corner sofa, your favourite recliner, or on the bed in the bedroom.",
+    "currency": "USD",
+    "countInStock": 3
+  },
+  {
+    "id": "3",
+    "category": "Tableware",
+    "name": "Rustic mug",
+    "sku": "sku_313356",
+    "price": 6,
+    "image": "/images/ig3.png",
+    "description": "16.9 fl oz $51.00",
+    "description_long": "The beautiful Rustic mug from House Doctor is made of ceramics and has an appealing glaze in grey and blue that contributes to a rustic feeling. Since it's handmade, every mug is unique. Match it with other tableware in the Rustic series.",
+    "currency": "USD",
+    "countInStock": 6
+  },
+  {
+    "id": "4",
+    "category": "Tableware",
+    "name": "Essence white wine glass 4-pack",
+    "sku": "sku_313358",
+    "price": 63,
+    "image": "/images/ig4.png",
+    "description": "From $19.00",
+    "description_long": "These Essence white wine glasses were designed by Alfredo Häberli in 2001. The style and the elegance of these glasses will make your dining",
+    "currency": "USD",
+    "countInStock": 3
+  }
+]

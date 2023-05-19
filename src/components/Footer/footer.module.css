@@ -1,0 +1,79 @@
+.footer {
+  display: grid;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  grid-template-areas:
+    "content followUs contactUs location"
+    "content2 followUs2 contactUs2 contactUs2"
+    " hrfooterline  hrfooterline  hrfooterline  hrfooterline"
+    "copyRight copyRight copyRight copyRight";
+  grid-template-rows: auto auto auto 3rem;
+  /* grid-template-columns: 12fr 2fr minmax(7rem, 1fr); */
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.hrFooterLine {
+  grid-area: hrfooterline;
+  margin: 25px auto 25px;
+  padding: 0;
+  width: 100%;
+  border: 1px solid #001e00;
+  /* border-top: solid 2px;
+  border-color: #001e00; */
+  opacity: 1;
+  border-radius: 0.2rem;
+}
+
+.content {
+  grid-area: content;
+}
+
+.content2 {
+  grid-area: content2;
+}
+
+.followUs {
+  grid-area: followUs;
+}
+
+.followUs2 {
+  grid-area: followUs2;
+}
+
+.contactUs {
+  grid-area: contactUs;
+}
+
+.contactUs2 {
+  grid-area: contactUs2;
+}
+
+.Location {
+  grid-area: location;
+}
+
+.iconsArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding-right: 0.5rem;
+}
+
+.copyRight {
+  grid-area: copyRight;
+  height: 4rem;
+  opacity: 0.6;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}

@@ -1,0 +1,62 @@
+.container {
+  /* display: grid;
+  margin: 2em;
+  justify-content: center;
+  align-items: center; */
+  /* width: "100%"; */
+
+  height: auto;
+}
+
+.photo {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  /* width: 50%; */
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.description {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 16px;
+  padding: 2rem 24px;
+  border: 2px;
+  border-style: solid;
+  opacity: 0.7;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1200px) {
+  .col {
+    margin: 5em;
+  }
+}
