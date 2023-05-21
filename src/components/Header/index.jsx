@@ -7,6 +7,7 @@ import HamburgerMenu from "../HamburgerMenu";
 import CartSummary from "../CartSummary";
 import SetColorMode from "../SetColorMode";
 import UserInfo from "../UserInfo";
+import Favorite from "../Favorite";
 
 export default function Header({ title, slogan }) {
   const [isOnTouch, setIsOnTouch] = useState(false);
@@ -45,6 +46,7 @@ export default function Header({ title, slogan }) {
               open={isOnTouch}
               onClose={() => setIsOnTouch(false)}
             />
+            <Favorite />
             <UserInfo />
             <CartSummary open={isOnTouch} onClose={() => setIsOnTouch(false)} />
           </div>

@@ -2,15 +2,15 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import {
   getFirestore,
   collection,
-  addDoc,
   getDocs,
+  getDoc,
   deleteDoc,
   doc,
   setDoc,
-  getDoc,
   query,
   where,
   initializeFirestore,
+  updateDoc,
 } from "firebase/firestore";
 import {
   getAuth,
@@ -165,6 +165,18 @@ export const getUserInfo = async () => {
   } else {
     return {};
   }
+};
+
+export const toggleFavoriteProduct = async ({ productId, uid }) => {
+  const docRef = doc(db, "users", uid);
+  const docSnap = await getDoc(docRef);
+  const userDoc = docSnap.data();
+  const favorites = userDoc?.favorites || [];
+  if (favorites.length === _.pull(favorites, productId).length) {
+    favorites.push(productId);
+  }
+  await updateDoc(docRef, { favorites });
+  return favorites;
 };
 
 export const login = async ({ email, password }) => {

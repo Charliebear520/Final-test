@@ -51,3 +51,7 @@
 .textGray {
   opacity: 0.6;
 }
+
+.favorite {
+  cursor: pointer;
+}

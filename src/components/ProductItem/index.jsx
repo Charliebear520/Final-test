@@ -1,17 +1,23 @@
 import Link from "../Link";
+import _ from "lodash";
 import { FavoriteIcon } from "../Icons";
 import { theme } from "antd";
+import { useToggleFavoriteProduct, useUserInfo } from "../../react-query";
 import styles from "./productitem.module.css";
 
 export default function ProductItem({ product }) {
   const {
-    token: { colorBgBase, colorTextFooter },
+    token: { colorBgBase, colorTextFooter, colorTextBase },
   } = theme.useToken();
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
+  const { mutate } = useToggleFavoriteProduct();
+  const { data: userInfo } = useUserInfo() || {};
+  const favorites = userInfo.favorites || [];
+  let isFavorite = _.includes(favorites, product.id);
   const toggleFavorite = () => {
-    console.log("toggleFavorite", product.id);
+    if (!!userInfo?.uid) mutate({ productId: product.id, uid: userInfo?.uid });
   };
 
   return (
@@ -40,7 +46,7 @@ export default function ProductItem({ product }) {
           <span className={styles.textGray}>USD {product.price}.00</span>
         </div> */}
           <div onClick={toggleFavorite} className={styles.favorite}>
-            <FavoriteIcon />
+            <FavoriteIcon color={isFavorite ? "#F19D38" : colorTextBase} />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import {
   getProductById,
   getProducts,
   getProductsByCategory,
+  toggleFavoriteProduct,
   login,
   register,
   getUserInfo,
@@ -20,6 +21,15 @@ export const useProductsByCategory = (category) => {
 
 export const useProductById = (productId) => {
   return useQuery([productId], getProductById);
+};
+
+export const useToggleFavoriteProduct = () => {
+  const queryClient = useQueryClient();
+  return useMutation(toggleFavoriteProduct, {
+    onSuccess: (data) => {
+      queryClient.invalidateQueries(["uid"]);
+    },
+  });
 };
 
 export const useUserInfo = () => {
