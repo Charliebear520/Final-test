@@ -5,6 +5,9 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Register from "./pages/Register";
 import Shop from "./pages/Shop";
 import { darkTheme, lightTheme } from "./theme";
 import { selectLightMode } from "./redux/colorSlice";
@@ -22,6 +25,11 @@ function Router() {
             <Route path="products">
               <Route path="category/:categoryName" element={<Category />} />
               <Route path="id/:productId" element={<Product />} />
+            </Route>
+            <Route path="auth">
+              <Route path="login" element={<Login />} />
+              <Route path="register" element={<Register />} />
+              <Route path="profile" element={<Profile />} />
             </Route>
           </Routes>
         </BrowserRouter>

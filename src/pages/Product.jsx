@@ -11,14 +11,16 @@ import ReviewList from "../components/ReviewList/Index";
 import reviews from "../json/reviews.json";
 import SuggestList from "../components/SuggestList";
 import suggestions from "../json/suggestions.json";
+import { useProductById } from "../react-query";
 
 function Product() {
   const {
     token: { colorBgBase, colorTextBase },
   } = theme.useToken();
   const { productId } = useParams();
-
-  const product = products.find((x) => x.id === productId);
+  const { data, isLoading } = useProductById(productId);
+  // const product = products.find((x) => x.id === productId);
+  const product = data || {};
 
   return (
     <div className="mainLayout">
@@ -37,7 +39,7 @@ function Product() {
         slogan="An example made by Vite."
       />
       <div className="layoutContent container">
-        <ProductDetail product={product} />
+        <ProductDetail product={product} isLoading={isLoading} />
         <ReviewList reviews={reviews} />
         <SuggestList suggestions={suggestions} />
         <IGList photos={photos} />

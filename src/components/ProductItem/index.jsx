@@ -1,4 +1,5 @@
 import Link from "../Link";
+import { FavoriteIcon } from "../Icons";
 import { theme } from "antd";
 import styles from "./productitem.module.css";
 
@@ -9,6 +10,10 @@ export default function ProductItem({ product }) {
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
+  const toggleFavorite = () => {
+    console.log("toggleFavorite", product.id);
+  };
+
   return (
     <div
       style={{
@@ -34,6 +39,9 @@ export default function ProductItem({ product }) {
           </Link>
           <span className={styles.textGray}>USD {product.price}.00</span>
         </div> */}
+          <div onClick={toggleFavorite} className={styles.favorite}>
+            <FavoriteIcon />
+          </div>
         </div>
       </div>
     </div>

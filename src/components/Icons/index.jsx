@@ -67,23 +67,21 @@ export function Moon({ color }) {
   );
 }
 
-// export function LikeIcon({ color }) {
-//   return (
-//     <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={styles.headerIcon}
-//       viewBox="0 0 500 500"
-//       transform="scale(1,-1)"
-//     >
-//       <path
-//         fill="none"
-//         stroke={color}
-//         strokeLinecap="square"
-//         strokeWidth="1.5"
-//         d="M104 391 c-62 -38 -69 -121 -16 -196 15 -21 58 -61 95 -88 l67 -49
-//         67 49 c79 57 122 114 130 170 13 97 -85 165 -168 116 -27 -16 -31 -16 -58 0
-//         -38 22 -78 22 -117 -2z"
-//       />
-//     </svg>
-//   );
-// }
+export function FavoriteIcon({ color }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      className={styles.headerIcon}
+    >
+      <path
+        d="M13 13l7.071-6.317a5.866 5.866 0 018.225 0 5.7 5.7 0 010 8.127L15.959 27 3.7 14.81a5.7 5.7 0 010-8.127 5.866 5.866 0 018.225 0S16.582 10.533 19 13"
+        fill="none"
+        stroke={color}
+        strokeLinecap="square"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+      ></path>
+    </svg>
+  );
+}

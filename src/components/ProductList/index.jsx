@@ -1,8 +1,8 @@
-import { Row, Col, theme } from "antd";
+import { Row, Col, theme, Skeleton } from "antd";
 import ProductItem from "../ProductItem";
 import styles from "./productlist.module.css";
 
-export default function ProductList({ products }) {
+export default function ProductList({ products, isLoading }) {
   const {
     token: { colorBgFooter, colorTextFooter },
   } = theme.useToken();
@@ -25,7 +25,9 @@ export default function ProductList({ products }) {
             xl={{ span: 8 }}
             xxl={{ span: 4 }}
           >
-            <ProductItem product={product} />
+            <Skeleton loading={isLoading} avatar active>
+              <ProductItem product={product} />
+            </Skeleton>
           </Col>
         ))}
       </Row>

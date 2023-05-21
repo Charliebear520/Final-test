@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useParams } from "react-router-dom";
 import { theme } from "antd";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -11,11 +12,17 @@ import categories from "../json/category.json";
 import Intro from "../components/Intro";
 import DetailList from "../components/DetailList";
 import DetailList2 from "../components/DetailList2";
+import _ from "lodash";
+import { useProductsByCategory } from "../react-query";
 
 function Home() {
   const {
     token: { colorBgBase, colorTextBase },
   } = theme.useToken();
+  const { categoryName } = useParams();
+  const { data, isLoading } = useProductsByCategory(categoryName);
+  const categories = data || [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]; //有小bug不知如何解決
+  // const title = _.startCase(categoryName);
   const title = "HEAD & SHOULDER";
 
   return (
@@ -32,7 +39,7 @@ function Home() {
       <Header className="layoutHeader" title={title} slogan="HIAR" />
       <div className="layoutContent ">
         <Intro />
-        <CategoryList categories={categories} />
+        <CategoryList categories={categories} isLoading={isLoading} />
         <DetailList />
         <DetailList2 />
 

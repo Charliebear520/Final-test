@@ -10,7 +10,15 @@ import {
   getDoc,
   query,
   where,
+  initializeFirestore,
 } from "firebase/firestore";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  initializeAuth,
+} from "firebase/auth";
+import _ from "lodash";
 
 import category from "../json/category.json";
 import products from "../json/products.json";
@@ -34,7 +42,12 @@ const app_length = getApps().length > 0;
 const app = app_length ? getApp() : initializeApp(firebaseConfig);
 
 // REFERENCE DB
-const db = getFirestore(app);
+const db = app_length
+  ? getFirestore(app)
+  : initializeFirestore(app, { experimentalForceLongPolling: true });
+
+// REFERENCE AUTH
+const auth = app_length ? getAuth(app) : initializeAuth(app);
 
 //Reference collection
 const categoryCollection = collection(db, "category");
@@ -134,4 +147,58 @@ export const getProductsByCategory = async ({ queryKey }) => {
     await result.push(product.data());
   });
   return result;
+};
+
+export const getUserInfo = async () => {
+  const storedUser = localStorage.getItem("user");
+  const user = auth?.currentUser || JSON.parse(storedUser) || null;
+
+  if (user) {
+    const docRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    const userDoc = docSnap.data();
+    return {
+      uid: user.uid,
+      email: user.email,
+      ...userDoc,
+    };
+  } else {
+    return {};
+  }
+};
+
+export const login = async ({ email, password }) => {
+  await signInWithEmailAndPassword(auth, email, password);
+  const user = auth.currentUser;
+  localStorage.setItem("user", JSON.stringify(user));
+};
+
+export const register = async ({ name, email, password }) => {
+  const userCredential = await createUserWithEmailAndPassword(
+    auth,
+    email,
+    password
+  );
+  const user = userCredential?.user;
+  localStorage.setItem("user", JSON.stringify(user));
+  const docRef = doc(db, "users", user.uid);
+  await setDoc(docRef, {
+    name,
+  });
+};
+
+export const updateUserInfo = async ({ name, adrs, tel, uid }) => {
+  const docRef = doc(db, "users", uid);
+  await updateDoc(docRef, {
+    name,
+    adrs,
+    tel,
+  });
+  const user = auth.currentUser;
+  localStorage.setItem("user", JSON.stringify(user));
+};
+
+export const logout = async () => {
+  await auth.signOut();
+  localStorage.removeItem("user");
 };

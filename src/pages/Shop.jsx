@@ -12,12 +12,23 @@ import Intro from "../components/Intro";
 import DetailList from "../components/DetailList";
 import DetailList2 from "../components/DetailList2";
 import ShopAll from "../components/ShopAll";
+import { useProducts } from "../react-query";
 
 function Shop() {
   const {
     token: { colorBgBase, colorTextBase },
   } = theme.useToken();
   const title = "HEAD & SHOULDER";
+
+  const { data, isLoading } = useProducts();
+  const products = data || [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+  ];
 
   return (
     <div className="mainLayout">
@@ -34,7 +45,7 @@ function Shop() {
 
       <div className="layoutContent ">
         <ShopAll />
-        <ProductList products={products} />
+        <ProductList products={products} isLoading={isLoading} />
         <IGList photos={photos} />
       </div>
       <Footer className="layoutFooter" />

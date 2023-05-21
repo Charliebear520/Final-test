@@ -1,8 +1,8 @@
-import { Row, Col, theme } from "antd";
+import { Row, Col, theme, Skeleton } from "antd";
 import CategoryItem from "../CategoryItem";
 import styles from "./categorylist.module.css";
 
-export default function CategoryList({ categories }) {
+export default function CategoryList({ categories, isLoading }) {
   const {
     token: { colorBgFooter, colorTextFooter },
   } = theme.useToken();
@@ -35,7 +35,9 @@ export default function CategoryList({ categories }) {
             xl={{ span: 6 }}
             xxl={{ span: 4 }}
           >
-            <CategoryItem category={category} />
+            <Skeleton loading={isLoading} avatar active>
+              <CategoryItem category={category} />
+            </Skeleton>
           </Col>
         ))}
       </Row>

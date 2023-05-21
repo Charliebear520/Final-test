@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductList from "../components/ProductList";
 import products from "../json/products.json";
+import { useProducts } from "../react-query";
 
 function Category() {
   const {
@@ -17,6 +18,15 @@ function Category() {
   );
 
   const title = _.startCase(categoryName);
+  const { data, isLoading } = useProducts();
+  const products = data || [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+  ];
 
   return (
     <div className="mainLayout">
@@ -35,7 +45,7 @@ function Category() {
         slogan="An example made by Vite."
       />
       <div className="layoutContent container">
-        <ProductList products={_products} />
+        <ProductList products={_products} isLoading={isLoading} />
       </div>
       <Footer className="layoutFooter" />
     </div>
