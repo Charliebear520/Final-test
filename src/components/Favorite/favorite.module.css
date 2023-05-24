@@ -7,3 +7,23 @@
   opacity: 0.6;
   margin-top: -4px;
 }
+
+.iconStyle {
+  width: 20vw;
+  height: 20vh;
+  display: "block";
+}
+
+.lotties {
+  width: 40rem;
+  height: 40rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .lotties {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}

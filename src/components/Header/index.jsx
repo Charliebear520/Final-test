@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Row, Col } from "antd";
 import Link from "../Link";
-import NavBar from "../NavBar";
+import NavBar from "../MotionNavBar";
 import styles from "./header.module.css";
 import HamburgerMenu from "../HamburgerMenu";
 import CartSummary from "../CartSummary";

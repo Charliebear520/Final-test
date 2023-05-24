@@ -8,6 +8,10 @@
   height: auto;
 }
 
+.w50 {
+  width: 50%;
+}
+
 .photo {
   /* display: flex; */
   justify-content: center;

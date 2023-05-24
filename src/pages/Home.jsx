@@ -14,6 +14,7 @@ import DetailList from "../components/DetailList";
 import DetailList2 from "../components/DetailList2";
 import _ from "lodash";
 import { useProductsByCategory } from "../react-query";
+import MotionDiv from "../components/MotionDiv";
 
 function Home() {
   const {
@@ -26,7 +27,7 @@ function Home() {
   const title = "HEAD & SHOULDER";
 
   return (
-    <div className="mainLayout">
+    <MotionDiv className="mainLayout">
       <Helmet>
         <title>{title}</title>
         <style>{`
@@ -46,7 +47,7 @@ function Home() {
         <IGList photos={photos} />
       </div>
       <Footer className="layoutFooter" />
-    </div>
+    </MotionDiv>
   );
 }
 

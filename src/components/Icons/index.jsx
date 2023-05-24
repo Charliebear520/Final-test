@@ -1,4 +1,5 @@
 import styles from "./icons.module.css";
+import { motion } from "framer-motion";
 
 export function CartIcon({ color }) {
   return (

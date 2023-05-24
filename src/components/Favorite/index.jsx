@@ -1,5 +1,6 @@
 import { Badge, theme } from "antd";
 import { FavoriteIcon } from "../Icons";
+
 import { useUserInfo } from "../../react-query";
 import styles from "./favorite.module.css";
 

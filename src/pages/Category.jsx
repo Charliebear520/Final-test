@@ -5,31 +5,20 @@ import { theme } from "antd";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductList from "../components/ProductList";
-import products from "../json/products.json";
-import { useProducts } from "../react-query";
+import { useProductsByCategory } from "../react-query";
+import MotionDiv from "../components/MotionDiv";
 
 function Category() {
   const {
     token: { colorBgBase, colorTextBase },
   } = theme.useToken();
   const { categoryName } = useParams();
-  const _products = products.filter(
-    (x) => x?.category.toUpperCase() === categoryName.toUpperCase()
-  );
-
+  const { data, isLoading } = useProductsByCategory(categoryName);
+  const products = data || [{ id: 1 }, { id: 2 }];
   const title = _.startCase(categoryName);
-  const { data, isLoading } = useProducts();
-  const products = data || [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-  ];
 
   return (
-    <div className="mainLayout">
+    <MotionDiv className="mainLayout">
       <Helmet>
         <title>{title}</title>
         <style>{`
@@ -45,11 +34,10 @@ function Category() {
         slogan="An example made by Vite."
       />
       <div className="layoutContent container">
-        <ProductList products={_products} isLoading={isLoading} />
+        <ProductList products={products} isLoading={isLoading} />
       </div>
       <Footer className="layoutFooter" />
-    </div>
+    </MotionDiv>
   );
 }
-
 export default Category;
