@@ -1,6 +1,8 @@
 .header {
   text-align: center;
   display: grid;
+  justify-content: center;
+  align-content: center;
   grid-template-areas: "navbar logo iconWrap";
   grid-template-columns: repeat(3, 1fr);
   padding-top: 1rem;
@@ -51,9 +53,10 @@
   .iconWrap {
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-top: auto;
     margin-bottom: auto;
-    gap: 1rem;
+    gap: 2rem;
   }
 }

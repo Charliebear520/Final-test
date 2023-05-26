@@ -21,8 +21,8 @@ function Home() {
     token: { colorBgBase, colorTextBase },
   } = theme.useToken();
   const { categoryName } = useParams();
-  const { data, isLoading } = useProductsByCategory(categoryName);
-  const categories = data || [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]; //有小bug不知如何解決
+  const { data } = useProductsByCategory(categoryName);
+  // const categories = data || [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]; //有小bug不知如何解決
   // const title = _.startCase(categoryName);
   const title = "HEAD & SHOULDER";
 
@@ -40,7 +40,7 @@ function Home() {
       <Header className="layoutHeader" title={title} slogan="HIAR" />
       <div className="layoutContent ">
         <Intro />
-        <CategoryList categories={categories} isLoading={isLoading} />
+        <CategoryList categories={categories} />
         <DetailList />
         <DetailList2 />
 

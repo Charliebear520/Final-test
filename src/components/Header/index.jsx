@@ -47,8 +47,8 @@ export default function Header({ title, slogan }) {
               onClose={() => setIsOnTouch(false)}
             />
             <Favorite />
-            <UserInfo />
             <CartSummary open={isOnTouch} onClose={() => setIsOnTouch(false)} />
+            <UserInfo />
           </div>
         </header>
       </div>

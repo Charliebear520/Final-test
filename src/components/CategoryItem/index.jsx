@@ -5,7 +5,7 @@ import styles from "./categoryitem.module.css";
 
 export default function CategoryItem({ category }) {
   const {
-    token: { colorBgBase, colorTextFooter },
+    token: { colorBgFooter, colorTextFooter },
   } = theme.useToken();
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
@@ -13,7 +13,7 @@ export default function CategoryItem({ category }) {
   return (
     <div
       style={{
-        backgroundColor: colorBgBase,
+        backgroundColor: colorBgFooter,
         color: colorTextFooter,
       }}
     >
@@ -26,10 +26,7 @@ export default function CategoryItem({ category }) {
           />
         </NavLink>
       </div>
-      <div>
-        {" "}
-        <h3 className={styles.name}>{category.category}</h3>
-      </div>
+      <h3 className={styles.name}>{category.category}</h3>
     </div>
   );
 }
