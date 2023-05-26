@@ -14,12 +14,20 @@ export default function Header({ title, slogan }) {
 
   return (
     <div className="container">
+      <div className={styles.news}>
+        <Link to="/">
+          <a className={styles.newsTitle}>
+            Enjoy complimentary standard delivery on all orders. +
+          </a>
+        </Link>
+      </div>
       <div>
         <header className={styles.header}>
           <HamburgerMenu
             onClick={() => setIsOnTouch(!isOnTouch)}
             isOnTouch={isOnTouch}
           />
+
           <NavBar
             open={isOnTouch}
             onClose={() => setIsOnTouch(false)}
@@ -32,6 +40,7 @@ export default function Header({ title, slogan }) {
               xl={{ span: 24 }}
               xxl={{ span: 24 }}
             > */}
+
           <div className={styles.logo}>
             <Link to="/">
               <h1 className={styles.headerTitle}>{title}</h1>
