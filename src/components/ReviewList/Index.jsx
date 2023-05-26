@@ -6,10 +6,12 @@ import styles from "./reviewlist.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+// import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Scrollbar } from "swiper";
+// import { Pagination } from "swiper";
 
 export default function ReviewList({ reviews }) {
   const {
@@ -42,11 +44,15 @@ export default function ReviewList({ reviews }) {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            pagination={{
-              clickable: true,
+            // pagination={{
+            //   clickable: true,
+            // }}
+            scrollbar={{
+              hide: true,
             }}
-            modules={[Pagination]}
-            className={styles.mySwiper}
+            modules={[Scrollbar]}
+            // modules={[Pagination]}
+            // className={styles.mySwiper}
           >
             {reviews.map((review) => (
               <SwiperSlide className={styles.swiper_slide} key={review.id}>

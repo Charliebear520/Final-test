@@ -39,9 +39,10 @@
   height: 100%;
 }
 
-/* .swiper-pagination {
-  position: relative;
-} */
+.swiper-pagination-bullets {
+  width: 20px;
+  height: 20px;
+}
 
 .swiper_slide {
   text-align: center;

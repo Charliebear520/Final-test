@@ -19,6 +19,9 @@
   align-items: center;
 }
 .logo {
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
   display: grid;
   margin: auto;
   justify-content: center;

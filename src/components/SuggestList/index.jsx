@@ -6,10 +6,10 @@ import styles from "./suggestlist.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Scrollbar } from "swiper";
 
 export default function SuggestList({ suggestions }) {
   const {
@@ -42,10 +42,10 @@ export default function SuggestList({ suggestions }) {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            pagination={{
-              clickable: true,
+            scrollbar={{
+              hide: true,
             }}
-            modules={[Pagination]}
+            modules={[Scrollbar]}
             className={styles.mySwiper}
           >
             {suggestions.map((suggestion) => (
