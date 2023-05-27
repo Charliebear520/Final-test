@@ -19,11 +19,17 @@ const LoginCard = ({ redirect }) => {
     mutate(values);
   };
 
-  useEffect(() => {
-    if (isSuccess) {
-      navigate(redirect);
-    }
-  }, [isSuccess, redirect]);
+  // useEffect(() => {
+  //   if (isSuccess) {
+  //     navigate(redirect);
+  //   }
+  // }, [isSuccess, redirect]);
+
+  // const [visible, setVisible] = useState(true);
+
+  // const toggleVisible = () => {
+  //   setVisible(!visible);
+  // };
 
   return (
     <Form
@@ -37,6 +43,7 @@ const LoginCard = ({ redirect }) => {
       // onFihishFailed={onFinishFailed}
     >
       <Form.Item
+        className={styles.loginItem}
         name="email"
         rules={[
           {
@@ -50,7 +57,11 @@ const LoginCard = ({ redirect }) => {
         ]}
         hasFeedback
       >
-        <Input prefix={<MailOutlined />} placeholder="E-Mail" />
+        <Input
+          className={styles.loginInput}
+          prefix={<MailOutlined />}
+          placeholder="E-Mail"
+        />
       </Form.Item>
       <Form.Item
         name="password"
@@ -70,7 +81,7 @@ const LoginCard = ({ redirect }) => {
       </Form.Item>
       <Form.Item>
         <Link className={styles.loginForm__forgot} to={"/"}>
-          Forgot password
+          Forgot password？
         </Link>
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox
@@ -115,6 +126,20 @@ const LoginCard = ({ redirect }) => {
         )}
       </Form.Item>
     </Form>
+    // <div className={styles["input-container"]}>
+    //   {visible ? (
+    //     <Input.Password
+    //       className={styles["input-field"]}
+    //       onClick={toggleVisible}
+    //     />
+    //   ) : (
+    //     <Input.Password
+    //       className={`${styles["input-field"]} ${styles.visible}`}
+    //       onClick={toggleVisible}
+    //     />
+    //   )}
+    //   <div className={styles.underline} />
+    // </div>
   );
 };
 
