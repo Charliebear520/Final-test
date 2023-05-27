@@ -68,7 +68,7 @@ export function Moon({ color }) {
   );
 }
 
-export function FavoriteIcon({ color }) {
+export function FavoriteIcon2({ color }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -85,4 +85,41 @@ export function FavoriteIcon({ color }) {
       ></path>
     </svg>
   );
+}
+
+// export function FavoriteIcon2({ color }) {
+//   return (
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       viewBox="0 0 43 43"
+//       fill="none"
+//       className={styles.headerIcon}
+//     >
+//       <path
+//         d="M28.698 15.1004C25.6017 12.8558 22.5341 15.1004 21.3873 16.5033C19.2371 14.1651 15.3668 12.2946 12.7866 16.5033C10.493 20.2444 13.79 23.6737 15.3668 25.3884L21.3873 31C23.1075 29.4412 26.9778 25.9495 28.698 24.4531C30.8481 22.5826 32.5683 17.9062 28.698 15.1004Z"
+//         fill="none"
+//         stroke={color}
+//         strokeLinecap="square"
+//         strokeMiterlimit="10"
+//         strokeWidth="2"
+//       ></path>
+//       <circle cx="21.5" cy="21.5" r="21" stroke="#437532" />
+//     </svg>
+//   );
+// } //new版
+
+{
+  /* <svg
+  width="43"
+  height="43"
+  viewBox="0 0 43 43"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M28.698 15.1004C25.6017 12.8558 22.5341 15.1004 21.3873 16.5033C19.2371 14.1651 15.3668 12.2946 12.7866 16.5033C10.493 20.2444 13.79 23.6737 15.3668 25.3884L21.3873 31C23.1075 29.4412 26.9778 25.9495 28.698 24.4531C30.8481 22.5826 32.5683 17.9062 28.698 15.1004Z"
+    stroke="#437532"
+  />
+  <circle cx="21.5" cy="21.5" r="21" stroke="#437532" />
+</svg>; */
 }

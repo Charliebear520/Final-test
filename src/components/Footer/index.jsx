@@ -15,7 +15,7 @@ export default function Footer() {
         color: colorTextFooter,
       }}
     >
-      <div className="container">
+      <div className={styles.container}>
         <footer className={styles.footer}>
           <div className={styles.content}>
             <p style={{ fontWeight: 400 }}>

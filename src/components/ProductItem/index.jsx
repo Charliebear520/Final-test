@@ -1,6 +1,6 @@
 import Link from "../Link";
 import _ from "lodash";
-import { FavoriteIcon } from "../Icons";
+import { FavoriteIcon2 } from "../Icons";
 import { theme } from "antd";
 import { useToggleFavoriteProduct, useUserInfo } from "../../react-query";
 import styles from "./productitem.module.css";
@@ -28,6 +28,9 @@ export default function ProductItem({ product }) {
       }}
     >
       <div className={styles.item}>
+        <div onClick={toggleFavorite} className={styles.favorite}>
+          <FavoriteIcon2 color={isFavorite ? "#F19D38" : colorTextBase} />
+        </div>
         <Link to={`/products/id/${product.id}`}>
           <img
             style={{ width: "100%", height: "100%" }}
@@ -45,9 +48,6 @@ export default function ProductItem({ product }) {
           </Link>
           <span className={styles.textGray}>USD {product.price}.00</span>
         </div> */}
-          <div onClick={toggleFavorite} className={styles.favorite}>
-            <FavoriteIcon color={isFavorite ? "#F19D38" : colorTextBase} />
-          </div>
         </div>
       </div>
     </div>

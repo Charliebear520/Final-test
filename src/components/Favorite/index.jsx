@@ -1,5 +1,5 @@
 import { Badge, theme } from "antd";
-import { FavoriteIcon } from "../Icons";
+import { FavoriteIcon2 } from "../Icons";
 
 import { useUserInfo } from "../../react-query";
 import styles from "./favorite.module.css";
@@ -16,7 +16,7 @@ export default function Favorite() {
   return (
     <div onClick={toggleOpen} className={styles.favorite}>
       <Badge count={count} color="#F19D38" style={{ color: "white" }}>
-        <FavoriteIcon color={colorTextBase} />
+        <FavoriteIcon2 color={colorTextBase} />
       </Badge>
     </div>
   );
