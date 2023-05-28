@@ -34,11 +34,12 @@ export default function ShippingAddressCard(props) {
         xxl={{ span: 15 }}
         className={styles.detail_col}
       >
+        <h1 className={styles.shippingtext}>Shipping Information</h1>
         <Steps
           type="navigation"
           current={current}
           onChange={onChange}
-          className="site-navigation-steps"
+          className={styles.site_navigation_steps}
           items={[
             {
               status: "finish",
@@ -61,12 +62,15 @@ export default function ShippingAddressCard(props) {
         <Form
           onFinish={handleSubmit}
           name="normal_login"
+          layout="vertical"
+          colon="false"
           className={styles.shippingForm}
           initialValues={shippingAddress}
           form={form}
         >
           <Form.Item
-            label="full name: "
+            label="full name "
+            className={styles.shippingInput}
             name="fullName"
             rules={[
               {
@@ -79,10 +83,11 @@ export default function ShippingAddressCard(props) {
             ]}
             hasFeedback
           >
-            <Input placeholder="Enter full name" />
+            <Input bordered={false} placeholder="Enter full name" />
           </Form.Item>
           <Form.Item
-            label="address: "
+            label="address "
+            className={styles.shippingInput}
             name="address"
             rules={[
               {
@@ -95,10 +100,11 @@ export default function ShippingAddressCard(props) {
             ]}
             hasFeedback
           >
-            <Input placeholder="Enter Address" />
+            <Input bordered={false} placeholder="Enter Address" />
           </Form.Item>
           <Form.Item
-            label="city: "
+            label="city "
+            className={styles.shippingInput}
             name="city"
             rules={[
               {
@@ -108,11 +114,12 @@ export default function ShippingAddressCard(props) {
             ]}
             hasFeedback
           >
-            <Input placeholder="Enter city" />
+            <Input bordered={false} placeholder="Enter city" />
           </Form.Item>
 
           <Form.Item
-            label="postal code: "
+            label="postal code "
+            className={styles.shippingInput}
             name="postalCode"
             rules={[
               {
@@ -122,11 +129,12 @@ export default function ShippingAddressCard(props) {
             ]}
             hasFeedback
           >
-            <Input placeholder="Enter postal code" />
+            <Input bordered={false} placeholder="Enter postal code" />
           </Form.Item>
 
           <Form.Item
-            label="country: "
+            label="country "
+            className={styles.shippingInput}
             name="country"
             rules={[
               {
@@ -136,7 +144,7 @@ export default function ShippingAddressCard(props) {
             ]}
             hasFeedback
           >
-            <Input placeholder="Enter country" />
+            <Input bordered={false} placeholder="Enter country" />
           </Form.Item>
 
           <Form.Item>

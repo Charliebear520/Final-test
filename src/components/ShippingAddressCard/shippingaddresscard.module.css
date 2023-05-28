@@ -1,12 +1,105 @@
 .shippingForm {
   max-width: 40rem;
-  background-color: #fff;
+  background-color: #faf7f2;
   padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .shippingForm__button {
-   width: 100%;
- }
- 
+  margin-top: 2rem;
+  width: 100%;
+  height: 40px;
+  background-color: #3b5233;
+}
+
+.shippingtext {
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #072502;
+}
+
+.shippingInput {
+  background-color: #faf7f2;
+  border-bottom: 1px solid #072502;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0;
+}
+
+.ant-input {
+  background-color: #faf7f2 !important;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 0rem 0rem 6rem;
+  /* margin: 2em; */
+  background-color: #faf7f2;
+}
+
+.image_col {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+}
+
+.detail-image {
+  width: 100%;
+}
+
+.detail_col {
+  /* display: grid; */
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  /* height: 200px; */
+}
+
+.name {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 50%;
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.description {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 16px;
+  padding: 2rem 24px;
+}
+
+.site_navigation_steps {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
