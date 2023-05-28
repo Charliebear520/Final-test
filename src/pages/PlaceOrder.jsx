@@ -1,6 +1,6 @@
 import { theme } from "antd";
 import { Helmet } from "react-helmet-async";
-import ShippingHeader from "../components/ShippingHeader";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PlaceOrderCard from "../components/PlaceOrderCard";
 
@@ -20,7 +20,7 @@ function PlaceOrder() {
                }
             `}</style>
       </Helmet>
-      <ShippingHeader
+      <Header
         title="PlaceOrder Page"
         step1
         step2

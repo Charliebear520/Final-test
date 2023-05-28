@@ -2,9 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Row, Col, Button } from "antd";
 import { useState } from "react";
-import { Steps } from "antd";
 import detail2 from "../../../src/assets/images/place_order.png";
-import styles from "./placeorder.module.css";
+import styles from "./ordercard.module.css";
 import {
   selectCartItems,
   selectPaymentMethod,
@@ -12,7 +11,7 @@ import {
   selectShippingAddress,
 } from "../../redux/cartSlice";
 
-export default function PlaceOrderCard() {
+export default function OrderCard() {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   const shippingAddress = useSelector(selectShippingAddress);
@@ -33,7 +32,7 @@ export default function PlaceOrderCard() {
         totalPrice,
       })
     );
-    navigate("/shopping/order");
+    navigate("/");
   };
 
   const getTotalPrice = () => {
@@ -59,31 +58,7 @@ export default function PlaceOrderCard() {
         xxl={{ span: 15 }}
         className={styles.detail_col}
       >
-        <h1 className={styles.ordertext}>Information Confirmation</h1>
-        <Steps
-          type="navigation"
-          current={current}
-          onChange={onChange}
-          className="site-navigation-steps"
-          items={[
-            {
-              status: "finish",
-              title: "Sign-In",
-            },
-            {
-              status: "finish",
-              title: "Shipping",
-            },
-            {
-              status: "finish",
-              title: "Payment",
-            },
-            {
-              status: "process",
-              title: "Place Order",
-            },
-          ]}
-        />
+        <h1 className={styles.ordertext}>Order</h1>
         <div>
           <div className={styles.card_body}>
             <h2 className={styles.titleText}>SHIPPING</h2>
@@ -184,7 +159,7 @@ export default function PlaceOrderCard() {
           type="primary"
           onClick={placeOrderHandler}
         >
-          Place Order
+          Back Home
         </Button>
       </Col>
       <Col

@@ -12,7 +12,7 @@ import Shop from "./pages/Shop";
 import Shipping from "./pages/Shipping";
 import Payment from "./pages/Payment";
 import PlaceOrder from "./pages/PlaceOrder";
-// import Order from "./pages/Order";
+import Order from "./pages/Order";
 
 import { darkTheme, lightTheme } from "./theme";
 import { selectLightMode } from "./redux/colorSlice";
@@ -40,7 +40,7 @@ function Router() {
               <Route path="shipping" element={<Shipping />} />
               <Route path="payment" element={<Payment />} />
               <Route path="placeorder" element={<PlaceOrder />} />
-              {/* <Route path="order/:orderId" element={<Order />} /> */}
+              <Route path="order" element={<Order />} />
             </Route>
           </Routes>
         </BrowserRouter>
