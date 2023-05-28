@@ -3,14 +3,35 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 20rem;
+  margin-bottom: 3rem;
 }
 
 .loginForm__forgot {
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  color: #072502;
+}
+
+.loginForm__register {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  color: #072502;
 }
 
 .loginForm__button {
   width: 100%;
+}
+
+.registerForm__button {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #072502;
 }
 
 .loginForm__successWrap {
@@ -53,6 +74,7 @@
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+  margin-bottom: 15%;
 }
 
 .loginInput {
@@ -60,4 +82,11 @@
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+  border-radius: 0px;
+}
+.forgotItem {
+  /* max-width: 20rem; */
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }

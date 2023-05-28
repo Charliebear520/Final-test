@@ -9,6 +9,11 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import Shop from "./pages/Shop";
+import Shipping from "./pages/Shipping";
+import Payment from "./pages/Payment";
+import PlaceOrder from "./pages/PlaceOrder";
+// import Order from "./pages/Order";
+
 import { darkTheme, lightTheme } from "./theme";
 import { selectLightMode } from "./redux/colorSlice";
 
@@ -30,6 +35,12 @@ function Router() {
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="profile" element={<Profile />} />
+            </Route>
+            <Route path="shopping">
+              <Route path="shipping" element={<Shipping />} />
+              <Route path="payment" element={<Payment />} />
+              <Route path="placeorder" element={<PlaceOrder />} />
+              {/* <Route path="order/:orderId" element={<Order />} /> */}
             </Route>
           </Routes>
         </BrowserRouter>

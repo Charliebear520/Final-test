@@ -19,17 +19,11 @@ const LoginCard = ({ redirect }) => {
     mutate(values);
   };
 
-  // useEffect(() => {
-  //   if (isSuccess) {
-  //     navigate(redirect);
-  //   }
-  // }, [isSuccess, redirect]);
-
-  // const [visible, setVisible] = useState(true);
-
-  // const toggleVisible = () => {
-  //   setVisible(!visible);
-  // };
+  useEffect(() => {
+    if (isSuccess) {
+      navigate(redirect);
+    }
+  }, [isSuccess, redirect]);
 
   return (
     <Form
@@ -43,7 +37,6 @@ const LoginCard = ({ redirect }) => {
       // onFihishFailed={onFinishFailed}
     >
       <Form.Item
-        className={styles.loginItem}
         name="email"
         rules={[
           {
@@ -57,11 +50,7 @@ const LoginCard = ({ redirect }) => {
         ]}
         hasFeedback
       >
-        <Input
-          className={styles.loginInput}
-          prefix={<MailOutlined />}
-          placeholder="E-Mail"
-        />
+        <Input prefix={<MailOutlined />} placeholder="E-Mail" />
       </Form.Item>
       <Form.Item
         name="password"
@@ -81,7 +70,7 @@ const LoginCard = ({ redirect }) => {
       </Form.Item>
       <Form.Item>
         <Link className={styles.loginForm__forgot} to={"/"}>
-          Forgot password？
+          Forgot password
         </Link>
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox
@@ -114,7 +103,7 @@ const LoginCard = ({ redirect }) => {
         )}
         Or <Link to={`/auth/register?redirect=${redirect}`}>register now!</Link>
         {!isError ? (
-          <div></div>
+          <></>
         ) : (
           <div className={styles.loginForm__errorWrap}>
             <h3 className={styles.loginForm__errorTitle}>
@@ -126,20 +115,6 @@ const LoginCard = ({ redirect }) => {
         )}
       </Form.Item>
     </Form>
-    // <div className={styles["input-container"]}>
-    //   {visible ? (
-    //     <Input.Password
-    //       className={styles["input-field"]}
-    //       onClick={toggleVisible}
-    //     />
-    //   ) : (
-    //     <Input.Password
-    //       className={`${styles["input-field"]} ${styles.visible}`}
-    //       onClick={toggleVisible}
-    //     />
-    //   )}
-    //   <div className={styles.underline} />
-    // </div>
   );
 };
 
