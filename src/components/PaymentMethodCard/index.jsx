@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Form, Radio, Button } from "antd";
+import { Form, Radio, Button, Space } from "antd";
 import { Row, Col } from "antd";
 import { useState } from "react";
 import { Steps } from "antd";
@@ -33,11 +33,12 @@ export default function PaymentMethodCard() {
         xxl={{ span: 15 }}
         className={styles.detail_col}
       >
+        <h1 className={styles.shippingtext}>Payment Method</h1>
         <Steps
           type="navigation"
           current={current}
           onChange={onChange}
-          className="site-navigation-steps"
+          className={styles.site_navigation_steps}
           items={[
             {
               status: "finish",
@@ -64,11 +65,19 @@ export default function PaymentMethodCard() {
           initialValues={paymentMethod}
           form={form}
         >
-          <Form.Item name="paymentMethod" label="Payment Method: ">
-            <Radio.Group>
-              <Radio value="Google">Google</Radio>
-              <Radio value="PayPal">PayPal</Radio>
-              <Radio value="Line">Line</Radio>
+          <Form.Item name="paymentMethod">
+            <Radio.Group className={styles.radiogroup}>
+              <Space direction="vertical">
+                <Radio value="Google" className={styles.radiotext}>
+                  google
+                </Radio>
+                <Radio value="PayPal" className={styles.radiotext}>
+                  paypal
+                </Radio>
+                <Radio value="Line" className={styles.radiotext}>
+                  line
+                </Radio>
+              </Space>
             </Radio.Group>
           </Form.Item>
 

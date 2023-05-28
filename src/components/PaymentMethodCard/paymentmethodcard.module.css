@@ -1,11 +1,66 @@
 .paymentForm {
-   max-width: 40rem;
-   padding: 1rem;
-   margin-left: auto;
-   margin-right: auto;
- }
- 
- .paymentForm__button {
-    width: 100%;
-  }
-  
+  max-width: 40rem;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paymentForm__button {
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 0em 0rem 0rem 6rem;
+  /* margin: 2em; */
+  background-color: #faf7f2;
+}
+
+.detail_col {
+  /* display: grid; */
+  /* margin: auto; */
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  /* height: 200px; */
+}
+
+.shippingtext {
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #072502;
+}
+
+.site_navigation_steps {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.paymentForm {
+  max-width: 40rem;
+  background-color: #faf7f2;
+  padding: 1rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.paymentForm__button {
+  margin-top: 2rem;
+  width: 100%;
+  height: 40px;
+  background-color: #3b5233;
+}
+
+.radiotext {
+  font-family: "Antic Didone";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #072502;
+}

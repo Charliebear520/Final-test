@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { selectShippingAddress } from "../../redux/cartSlice";
 import { useState } from "react";
 import { Steps } from "antd";
-import CheckoutSteps from "../CheckoutSteps";
+// import CheckoutSteps from "../CheckoutSteps";
 import styles from "./shippingaddresscard.module.css";
 import detail2 from "../../../src/assets/images/shipping&payment.png";
 
