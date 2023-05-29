@@ -8,7 +8,7 @@ export default function Intro() {
     <div className={styles.container}>
       <Row gutter={[32, 32]}>
         <Col
-          sm={{ span: 24 }}
+          xs={{ span: 24 }}
           lg={{ span: 24 }}
           xl={{ span: 24 }}
           xxl={{ span: 24 }}
@@ -29,7 +29,7 @@ export default function Intro() {
             >
               <Row gutter={[32, 32]} className={styles.content}>
                 <Col
-                  sm={{ span: 12 }}
+                  xs={{ span: 24 }}
                   lg={{ span: 12 }}
                   xl={{ span: 9 }}
                   xxl={{ span: 8 }}
@@ -38,12 +38,14 @@ export default function Intro() {
                   {" "}
                   <Row>
                     <div className={styles.name}>
-                      <h1>Introducing Aromatique Incense</h1>
+                      <h1 className={styles.title}>
+                        Introducing Aromatique Incense
+                      </h1>
                     </div>
                   </Row>
                   <Row>
                     <div className={styles.description}>
-                      <h3>
+                      <h3 className={styles.descrip}>
                         Discover a trio of transportive aromas for wandering
                         minds—Murasaki, Kagerou and Sarashina Aromatique
                         Incense—and the Bronze Incense Holder that elevates

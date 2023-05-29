@@ -1,24 +1,43 @@
 .container {
-  width: 100% ;
-  margin-left: auto ;
-  margin-right: auto ;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
-  display: grid;
+  /* display: grid; */
   padding-top: 2rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  grid-template-areas:
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  /* grid-template-areas:
     "content followUs contactUs location"
     "content2 followUs2 contactUs2 contactUs2"
     " hrfooterline  hrfooterline  hrfooterline  hrfooterline"
     "copyRight copyRight copyRight copyRight";
   grid-template-rows: auto auto auto 3rem;
-  /* grid-template-columns: 12fr 2fr minmax(7rem, 1fr); */
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr; */
   gap: 1em;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    /* display: grid; */
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* grid-template-areas:
+      "content followUs contactUs location"
+      "content2 followUs2 contactUs2 contactUs2"
+      " hrfooterline  hrfooterline  hrfooterline  hrfooterline"
+      "copyRight copyRight copyRight copyRight";
+    grid-template-rows: auto auto auto 3rem;
+  
+    grid-template-columns: 2fr 1fr 1fr 1fr; */
+    gap: 1em;
+    overflow: hidden;
+  }
 }
 
 .hrFooterLine {
@@ -82,4 +101,15 @@
   display: flex;
   justify-content: start;
   align-items: flex-start;
+}
+
+p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #3b5233;
 }

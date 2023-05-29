@@ -32,6 +32,21 @@
   line-height: 1.2;
 }
 
+.title {
+  font-size: 40px;
+}
+
+.descrip {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  color: #faf7f2;
+}
+
 .description {
   display: grid;
   margin: auto;
@@ -59,6 +74,11 @@
   justify-content: flex-end;
 }
 
+.col {
+  margin-top: 90%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 @media (min-width: 1200px) {
   .col {
     margin: 5em;

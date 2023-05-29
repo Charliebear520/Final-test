@@ -23,11 +23,12 @@ export default function Header({ title, slogan }) {
       </div>
       <div>
         <header className={styles.header}>
-          <HamburgerMenu
-            onClick={() => setIsOnTouch(!isOnTouch)}
-            isOnTouch={isOnTouch}
-          />
-
+          <div className={styles.logo}>
+            <Link to="/">
+              <h1 className={styles.headerTitle}>{title}</h1>
+            </Link>
+            <p className={styles.headerSlogan}>{slogan}</p>
+          </div>
           <NavBar
             open={isOnTouch}
             onClose={() => setIsOnTouch(false)}
@@ -41,14 +42,12 @@ export default function Header({ title, slogan }) {
               xxl={{ span: 24 }}
             > */}
 
-          <div className={styles.logo}>
-            <Link to="/">
-              <h1 className={styles.headerTitle}>{title}</h1>
-            </Link>
-            <p className={styles.headerSlogan}>{slogan}</p>
-          </div>
           {/* </Col>
           </Row> */}
+          <HamburgerMenu
+            onClick={() => setIsOnTouch(!isOnTouch)}
+            isOnTouch={isOnTouch}
+          />
 
           <div className={styles.iconWrap}>
             <SetColorMode

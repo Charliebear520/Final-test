@@ -18,7 +18,7 @@ export default function CategoryList({ categories }) {
     >
       <Row gutter={[32, 32]} className={styles.section}>
         <Col
-          sm={{ span: 24 }}
+          xs={{ span: 24 }}
           lg={{ span: 24 }}
           xl={{ span: 24 }}
           xxl={{ span: 24 }}
@@ -30,7 +30,7 @@ export default function CategoryList({ categories }) {
         {categories.map((category) => (
           <Col
             key={category.id}
-            sm={{ span: 12 }}
+            xs={{ span: 12 }}
             lg={{ span: 8 }}
             xl={{ span: 6 }}
             xxl={{ span: 4 }}

@@ -8,7 +8,7 @@ export default function DetailList() {
   return (
     <Row gutter={[32, 32]} className={styles.section}>
       <Col
-        sm={{ span: 24 }}
+        xs={{ span: 24 }}
         lg={{ span: 24 }}
         xl={{ span: 15 }}
         xxl={{ span: 15 }}
@@ -21,7 +21,7 @@ export default function DetailList() {
         />
       </Col>
       <Col
-        sm={{ span: 24 }}
+        xs={{ span: 24 }}
         lg={{ span: 24 }}
         xl={{ span: 9 }}
         xxl={{ span: 9 }}
