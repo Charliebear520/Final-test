@@ -28,7 +28,7 @@ function Profile() {
       <div className="layoutContent container">
         <ProfileCard />
       </div>
-      <Footer className="layoutFooter" />
+      {/* <Footer className="layoutFooter" /> */}
     </div>
   );
 }
