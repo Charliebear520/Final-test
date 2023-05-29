@@ -10,12 +10,30 @@
 }
 
 .section {
+  /* display: grid; */
   display: flex;
+  grid-template-areas:
+    "img"
+    "detail";
+  grid-template-columns: 50% auto;
+  grid-template-rows: 50% auto;
   justify-content: center;
   align-items: center;
-  padding: 0em 0rem 0rem 6rem;
+  padding: 3em 2rem 0rem 2rem;
   /* margin: 2em; */
   background-color: #faf7f2;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 0rem 0rem 6rem;
+    /* margin: 2em; */
+    background-color: #faf7f2;
+  }
 }
 
 .profiletext {
@@ -65,4 +83,12 @@
   height: 40px;
   background-color: #faf7f2;
   border: 1px solid #3b5233;
+}
+
+.detail_col {
+  grid-area: detail;
+}
+
+.image_col {
+  grid-area: img;
 }
