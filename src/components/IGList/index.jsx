@@ -31,7 +31,7 @@ export default function IGList({ photos }) {
         {photos.map((photo) => (
           <Col
             key={photo.id}
-            sm={{ span: 12 }}
+            xs={{ span: 12 }}
             lg={{ span: 8 }}
             xl={{ span: 6 }}
             xxl={{ span: 4 }}
