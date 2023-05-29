@@ -4,6 +4,9 @@
   margin-right: auto;
   max-width: 20rem;
   margin-bottom: 3rem;
+  max-width: 40rem;
+  background-color: #faf7f2;
+  padding: 1rem;
 }
 
 .loginForm__forgot {
@@ -11,8 +14,14 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+
   color: #072502;
 }
 
@@ -26,12 +35,28 @@
 
 .loginForm__button {
   width: 100%;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #faf7f2;
 }
 
 .registerForm__button {
   width: 100%;
   background-color: #ffffff;
   border: 1px solid #072502;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+
+  color: #072502;
 }
 
 .loginForm__successWrap {
@@ -78,15 +103,25 @@
 }
 
 .loginInput {
+  background-color: #faf7f2;
   border-bottom: 1px solid #072502;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-radius: 0px;
+  border-radius: 0;
 }
 .forgotItem {
   /* max-width: 20rem; */
   display: grid;
   justify-items: center;
   align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 0rem 0rem 6rem;
+  /* margin: 2em; */
+  background-color: #faf7f2;
 }

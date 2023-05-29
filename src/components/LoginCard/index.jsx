@@ -26,17 +26,23 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
     }
   }, [isSuccess, redirect]);
 
+  const modalBodyStyle = {
+    backgroundColor: "#FEFCF9",
+  };
+
   return (
     <Modal
       title="Member Login"
       open={isOpen}
       onCancel={handleCancel}
       footer={null}
+      bodyStyle={modalBodyStyle}
     >
       <Form
         name="normal_login"
         className={styles.loginForm}
         form={form}
+        layout="vertical"
         initialValues={{
           isRemember: true,
         }}
@@ -44,7 +50,9 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
         // onFihishFailed={onFinishFailed}
       >
         <Form.Item
+          label="email "
           name="email"
+          className={styles.loginInput}
           rules={[
             {
               type: "email",
@@ -57,10 +65,12 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
           ]}
           hasFeedback
         >
-          <Input prefix={<MailOutlined />} placeholder="E-Mail" />
+          <Input bordered={false} placeholder="E-Mail" />
         </Form.Item>
         <Form.Item
+          label="password "
           name="password"
+          className={styles.loginInput}
           rules={[
             {
               required: true,
@@ -70,15 +80,13 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
           hasFeedback
         >
           <Input.Password
-            prefix={<LockOutlined />}
+            // prefix={<LockOutlined />}
             type="password"
             placeholder="Password"
+            bordered={false}
           />
         </Form.Item>
         <Form.Item>
-          <Link className={styles.loginForm__forgot} to={"/"}>
-            Forgot password
-          </Link>
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox
               onChange={() => setIsRemember(!isRemember)}
@@ -108,8 +116,8 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
               Log in
             </Button>
           )}
-          Or{" "}
-          <Link to={`/auth/register?redirect=${redirect}`}>register now!</Link>
+          {/* Or{" "} */}
+
           {!isError ? (
             <></>
           ) : (
@@ -122,6 +130,19 @@ const LoginCard = ({ redirect, isOpen, toggleModal }) => {
             </div>
           )}
         </Form.Item>
+        <Form.Item>
+          <Link className={styles.loginForm__forgot} to={"/"}>
+            forget password？
+          </Link>
+        </Form.Item>
+        <p>Join a member</p>
+        <Button
+          // type="primary"
+          htmlType="submit"
+          className={styles.registerForm__button}
+        >
+          <Link to={`/auth/register?redirect=${redirect}`}>register</Link>
+        </Button>
       </Form>
     </Modal>
   );

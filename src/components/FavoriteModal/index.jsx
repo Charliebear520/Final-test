@@ -40,7 +40,7 @@ export default function FavoriteModal({ isOpen, toggleModal }) {
 
   return (
     <Modal
-      title="Favorite Basket"
+      title="Wishing List"
       open={isOpen}
       onCancel={handleCancel}
       footer={null}
@@ -62,8 +62,9 @@ export default function FavoriteModal({ isOpen, toggleModal }) {
             <div className={styles.content}>
               <div className={styles.name}>{item.name}</div>
               <div>
-                Qty: {"   "}
+                {/* Qty: {"   "} */}
                 <Select
+                  className={styles.selectItem}
                   defaultValue={item.qty}
                   onChange={(qty) =>
                     dispatch(

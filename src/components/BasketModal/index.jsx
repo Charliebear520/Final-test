@@ -34,10 +34,11 @@ export default function BasketModal({ isOpen, toggleModal }) {
 
   return (
     <Modal
-      title="Shopping Basket"
+      title="Shopping Cart"
       open={isOpen}
       onCancel={handleCancel}
       footer={null}
+      className={styles.modalText}
     >
       {cartItems.length === 0 ? (
         <div>Cart is empty</div>
@@ -56,8 +57,9 @@ export default function BasketModal({ isOpen, toggleModal }) {
             <div className={styles.content}>
               <div className={styles.name}>{item.name}</div>
               <div>
-                Qty: {"   "}
+                {/* Qty: {"   "} */}
                 <Select
+                  className={styles.selectItem}
                   defaultValue={item.qty}
                   onChange={(qty) =>
                     dispatch(
@@ -92,13 +94,16 @@ export default function BasketModal({ isOpen, toggleModal }) {
           </li>
         ))
       )}
-      <div className={styles.wrap}>
+      {/* <div className={styles.wrap}>
         Total
         <div className={styles.totalPrice}>${getTotalPrice()}</div>
-      </div>
+      </div> */}
       <Button className={styles.btn} type="primary" onClick={checkoutHandler}>
-        <CartIcon color={"#ffffff"} />
-        <span style={{ marginLeft: 12 }}>Start Checkout</span>
+        {/* <CartIcon color={"#ffffff"} /> */}
+        <span style={{ marginLeft: 12 }}>
+          Start Checkout{" "}
+          <span style={{ marginLeft: 12 }}>-${getTotalPrice()}</span>
+        </span>
       </Button>
     </Modal>
   );
