@@ -27,7 +27,7 @@ export default function Header({ title, slogan }) {
             <Link to="/">
               <h1 className={styles.headerTitle}>{title}</h1>
             </Link>
-            <p className={styles.headerSlogan}>{slogan}</p>
+            {/* <p className={styles.headerSlogan}>{slogan}</p> */}
           </div>
           <NavBar
             open={isOnTouch}

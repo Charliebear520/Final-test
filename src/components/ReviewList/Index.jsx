@@ -29,7 +29,7 @@ export default function ReviewList({ reviews }) {
     >
       <Row gutter={[32, 32]} className={styles.section}>
         <Col
-          sm={{ span: 24 }}
+          xs={{ span: 24 }}
           lg={{ span: 24 }}
           xl={{ span: 24 }}
           xxl={{ span: 24 }}
@@ -42,7 +42,6 @@ export default function ReviewList({ reviews }) {
 
         <>
           <Swiper
-            slidesPerView={3}
             spaceBetween={30}
             // pagination={{
             //   clickable: true,
@@ -53,6 +52,19 @@ export default function ReviewList({ reviews }) {
             modules={[Scrollbar]}
             // modules={[Pagination]}
             // className={styles.mySwiper}
+            breakpoints={{
+              // when window width is >= 640px
+              320: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
           >
             {reviews.map((review) => (
               <SwiperSlide className={styles.swiper_slide} key={review.id}>

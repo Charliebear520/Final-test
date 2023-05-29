@@ -40,13 +40,26 @@ export default function SuggestList({ suggestions }) {
 
         <>
           <Swiper
-            slidesPerView={3}
+            // slidesPerView={3}
             spaceBetween={30}
             scrollbar={{
               hide: true,
             }}
             modules={[Scrollbar]}
             className={styles.mySwiper}
+            breakpoints={{
+              // when window width is >= 640px
+              320: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
           >
             {suggestions.map((suggestion) => (
               <SwiperSlide className={styles.swiper_slide} key={suggestion.id}>
