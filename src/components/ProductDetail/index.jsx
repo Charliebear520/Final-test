@@ -72,6 +72,8 @@ function ProductDetail({ product, isLoading }) {
               <p className={styles.status}>
                 Status: {product.countInStock > 0 ? "In Stock" : "Unavailable."}
               </p> */}
+
+                {/* <p className={styles.qty}>Total Price: {product.price * qty}</p> */}
                 <div className={styles.qty}>
                   Qty: {"   "}
                   <Select
@@ -87,8 +89,7 @@ function ProductDetail({ product, isLoading }) {
                     ))}
                   </Select>
                 </div>
-                {/* <p className={styles.qty}>Total Price: {product.price * qty}</p> */}
-                <AddToBasket product={product} qty={qty} />
+                <AddToBasket product={product} />
               </div>
             </div>
           </Skeleton>
