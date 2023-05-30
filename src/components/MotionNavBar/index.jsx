@@ -61,10 +61,10 @@ export default function NavBar({ open, onClose }) {
         SHOP
       </MotionNavLink>
       <MotionNavLink
-        onClick={() => setSelected(0)}
-        id={0}
+        onClick={() => setSelected(1)}
+        id={1}
         selected={selected}
-        to="/"
+        to="/shop"
       >
         BASKET
       </MotionNavLink>
