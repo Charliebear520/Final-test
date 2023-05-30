@@ -89,7 +89,7 @@ function ProductDetail({ product, isLoading }) {
                     ))}
                   </Select>
                 </div>
-                <AddToBasket product={product} />
+                <AddToBasket product={product} qty={qty} />
               </div>
             </div>
           </Skeleton>

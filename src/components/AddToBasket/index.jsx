@@ -32,7 +32,7 @@ export default function AddToCart({ product, qty }) {
   };
 
   return (
-    <Button type="primary" className={styles.btn} onClick={addToCart}>
+    <Button className={styles.btn} onClick={addToCart}>
       {/* <Basket color={"#ffffff"} />{" "} */}
       <p className={styles.qty}>Add to your cart -${product.price * qty}</p>
     </Button>
