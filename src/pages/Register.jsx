@@ -28,7 +28,7 @@ function Register() {
       <div className="layoutContent container">
         <RegisterCard />
       </div>
-      <Footer className="layoutFooter" />
+      {/* <Footer className="layoutFooter" /> */}
     </div>
   );
 }
