@@ -5,9 +5,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Router from "./Router";
 import { persistor, store } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
-const queryClient = new QueryClient();
-// import { feedProducts } from "./api";
-// feedProducts();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: { networkMode: "offlineFirst" },
+    mutations: { networkMode: "offlineFirst" },
+  },
+});
 
 function App() {
   return (
