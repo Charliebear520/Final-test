@@ -39,38 +39,43 @@ export default function NavBar({ open, onClose }) {
       >
         Shop
       </MotionNavLink>
-      {/* <MotionNavLink
-        onClick={() => setSelected(2)}
-        id={2}
+    </motion.ul>
+  );
+
+  const NavBarContent2 = (props) => (
+    <motion.ul {...props} style={{ listStyleType: "none" }}>
+      <MotionNavLink
+        onClick={() => setSelected(0)}
+        id={0}
         selected={selected}
-        to="/products/category/home-accessories"
+        to="/"
       >
-        Home accessories
+        HOME
       </MotionNavLink>
       <MotionNavLink
-        onClick={() => setSelected(3)}
-        id={3}
+        onClick={() => setSelected(1)}
+        id={1}
         selected={selected}
-        to="/products/category/lighting"
+        to="/shop"
       >
-        Lighting
+        SHOP
       </MotionNavLink>
       <MotionNavLink
-        onClick={() => setSelected(4)}
-        id={4}
+        onClick={() => setSelected(0)}
+        id={0}
         selected={selected}
-        to="/products/category/textile"
+        to="/"
       >
-        Textile
+        BASKET
       </MotionNavLink>
       <MotionNavLink
-        onClick={() => setSelected(5)}
-        id={5}
+        onClick={() => setSelected(1)}
+        id={1}
         selected={selected}
-        to="/products/category/furniture"
+        to="login"
       >
-        Furniture
-      </MotionNavLink> */}
+        LOGIN
+      </MotionNavLink>
     </motion.ul>
   );
 
@@ -83,7 +88,7 @@ export default function NavBar({ open, onClose }) {
       ) : (
         <Drawer title="CATEGORY" placement="left" onClose={onClose} open={open}>
           <motion.div>
-            <NavBarContent className={styles.Drawer} />
+            <NavBarContent2 className={styles.Drawer} />
           </motion.div>
         </Drawer>
       )}
